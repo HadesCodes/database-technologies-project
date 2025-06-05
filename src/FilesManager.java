@@ -339,6 +339,7 @@ class FilesManager {
             indexBuffer.put(nextIndexBlockId, node);
             result.put(node,(int) nextIndexBlockId);
         }
+        totalBlocksInIndexFile += nodes.size();
         return result;
     }
 

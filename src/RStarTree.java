@@ -485,7 +485,7 @@ public class RStarTree {
                 writeBuffer.add(node);
                 leafNodes.add(node);
 
-                if (writeBuffer.size() >= 500) {
+                if (writeBuffer.size() >= 5000) {
                     Map<Node, Integer> blockIDs = FilesManager.writeNewIndexFileBlocks(new ArrayList<>(writeBuffer));
                     for (Node n : writeBuffer) {
                         n.setNodeBlockId(blockIDs.get(n));
@@ -531,7 +531,7 @@ public class RStarTree {
                 toFlush.add(node);
                 newLevel.add(node);
 
-                if (toFlush.size() >= 500) {
+                if (toFlush.size() >= 5000) {
                     Map<Node, Integer> blockIDs = FilesManager.writeNewIndexFileBlocks(new ArrayList<>(toFlush));
                     for (Node n : toFlush) {
                         n.setNodeBlockId(blockIDs.get(n));

@@ -6,12 +6,11 @@ public class Main {
     public static void main(String[] args) {
         boolean filesExist = Files.exists(Paths.get(FilesManager.PATH_TO_DATAFILE));
         boolean resetFiles = false;
-
         Scanner scanner = new Scanner(System.in);
 
         if (filesExist) {
-            System.out.println("Data-file and index-file already exist");
-            System.out.print("Do you want to make new data and index files using the " + FilesManager.getPathToCsv() +  " file? (y/n): ");
+            System.out.println("Data and index files already exist");
+            System.out.print("Proceed with new files using the " + FilesManager.getPathToCsv() +  " file? (y/n): ");
             String answer;
             while (true)
             {
@@ -23,7 +22,7 @@ public class Main {
                 } else if (answer.equals("n")) {
                     break;
                 } else {
-                    System.out.println("Please answer with y/n: ");
+                    System.out.println("Incorrect response, answer with (y/n) : ");
                 }
             }
         }
@@ -47,7 +46,7 @@ public class Main {
         long innitEndTime;
 
         if(insertRecordsFromDataFile) {
-            System.out.println("Do you want to bulk load the R*Tree? (y/n): ");
+            System.out.println("Do you want to bulk load the R*Tree? (y/n) : ");
             String answer;
             boolean doBulkLoad;
             while (true)
@@ -61,7 +60,7 @@ public class Main {
                     doBulkLoad = false;
                     break;
                 } else {
-                    System.out.println("Please answer with y/n: ");
+                    System.out.println("Incorrect response, answer with (y/n) : ");
                 }
             }
             System.out.println("Building R*Tree index from datafile...");
