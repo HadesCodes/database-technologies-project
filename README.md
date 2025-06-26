@@ -1,7 +1,14 @@
 # database-technologies-project
-University Project for Database Technologies. Spatial Data, R*-tree implementation. Java language
+Η παρούσα εργασία επικεντρώνεται στην υλοποίηση του R*-tree, 
+μιας βελτιωμένης δομής δένδρου για την αποδοτική αποθήκευση 
+και ανάκτηση πολυδιάστατων χωρικών δεδομένων. Η υλοποίηση 
+πραγματοποιήθηκε στη γλώσσα Java και εφαρμόστηκε σε 
+δεδομένα από το OpenStreetMap (OSM), επιτρέποντας την 
+εκτέλεση ερωτημάτων περιοχής (range query), k-πλησιέστερων 
+γειτόνων (k-NN query) και κορυφογραμμής (skyline query). 
 
-We will organize OpenStreetMap (OSM) data into blocks, stored inside a datafile. The data will be indexed
-into an R*-tree structure, with Range, k-NearestNeighbors and Skyline queries. The project will include a Technical
-Essay with information about the implementation, our thought proccess and the Recorded Time intervals for the queries, as well 
-as graphs comparing the different searches.
+Η εργασία θα συνοδεύεται από τεχνική αναφορά, 
+όπου θα περιγράφεται η υλοποίηση, 
+η μεθοδολογία που ακολουθήθηκε,
+οι μετρήσεις χρόνου εκτέλεσης για τα διάφορα είδη ερωτημάτων, 
+καθώς και γραφήματα που συγκρίνουν την απόδοσή τους.
